@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+
+    <title>De Chefkok</title>
+    <script>
+      $(document).ready(function () {
+        var header = $('.header');
+        scrollPrev = 0;
+
+        $(window).scroll(function () {
+          var scrolled = $(window).scrollTop();
+
+          if (scrolled > 100 && scrolled > scrollPrev) {
+            header.addClass('out');
+          } else {
+            header.removeClass('out');
+          }
+          scrollPrev = scrolled;
+        });
+
+        $('.navbar_burger').click(function (e) {
+          $('.navbar_burger, .navbar_menu').toggleClass('active');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <div class="navbar_logo"><a href="#">De Chefkok</a></div>
+          <div class="navbar_burger">
+            <span></span>
+          </div>
+          <div class="navbar_menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <video
+          class="bg_video"
+          src="./video/production ID_4457933.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <div class="main_content">
+          <h1 class="main_title">Cucina Italiana</h1>
+          <span class="main_span">Tutto il sapore della cucina partenopea</span>
+          <div class="main_buttons">
+            <button class="main_button main_button-buy">Buy</button>
+            <button class="main_button main_button-show">Show</button>
+          </div>
+        </div>
+      </main>
+      <section class="dishes">
+        <h2 class="dishes_title">Populaire Gerechten</h2>
+        <div class="dishes_favorites">
+          <div class="dishes_pasta">
+            <picture class="dishes_image">
+              <img src="./img/pasta.png" width="300" alt="pasta" />
+            </picture>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="dishes_text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Deleniti, enim culpa inventore quaerat error itaque doloremque
+              alias suscipit dolorem laborum ratione hic dicta praesentium quasi
+              soluta accusamus minima similique. Magnam.
+            </p>
+            <a class="dishes_link" href="#">show ...</a>
+          </div>
+          <div class="dishes_pasta">
+            <picture class="dishes_image">
+              <img src="./img/pasta.png" width="300" alt="pasta" />
+            </picture>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="dishes_text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Deleniti, enim culpa inventore quaerat error itaque doloremque
+              alias suscipit dolorem laborum ratione hic dicta praesentium quasi
+              soluta accusamus minima similique. Magnam.
+            </p>
+            <a class="dishes_link" href="#">show ...</a>
+          </div>
+          <div class="dishes_pasta">
+            <picture class="dishes_image">
+              <img src="./img/pasta.png" width="300" alt="pasta" />
+            </picture>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="dishes_text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Deleniti, enim culpa inventore quaerat error itaque doloremque
+              alias suscipit dolorem laborum ratione hic dicta praesentium quasi
+              soluta accusamus minima similique. Magnam.
+            </p>
+            <a class="dishes_link" href="#">show ...</a>
+          </div>
+        </div>
+      </section>
+      <section class="menu">
+        <h2 class="menu_title">Menu</h2>
+        <div class="main_menu-gerechten">
+          <div class="chef menu_gerechten">
+            <img src="./img/pngwing.com.png" width="300" alt="chef" />
+          </div>
+          <div class="menu_gerechten">
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+          </div>
+          <div class="menu_gerechten">
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+          </div>
+          <div class="menu_gerechten">
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+            <div class="dishes__name">
+              <h3 class="dishes_subtatle">Pasta</h3>
+              <span class="dishes_price">10,99</span>
+            </div>
+            <p class="gerecht_text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+              nemo rerum similique, reprehenderit facilis molestiae nisi
+              voluptates dolores possimus sint corrupti itaque cupiditate! Sint,
+              quidem?
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer_container">
+          <div class="footer_contact">
+            <h3 class="footer_subtitle_1">Contact</h3>
+            <p class="footer_p">Osdorplein 16, 1234AB, Amsterdam</p>
+            <p class="footer_p">Tel nr: 12345678</p>
+            <p class="footer_p">Openingstijden: ma t/m za 10:00 - 22:00</p>
+            <div class="social_media">
+              <i class="soc_med fab fa-instagram"></i>
+              <i class="soc_med fab fa-twitter-square"></i>
+              <i class="soc_med fab fa-facebook"></i>
+            </div>
+          </div>
+          <div class="footer_nav">
+            <h3 class="footer_subtatle_2">Navigation</h3>
+            <ul>
+              <li class="footer_link"><a href=""></a>home</li>
+              <li class="footer_link"><a href=""></a>menu</li>
+              <li class="footer_link"><a href=""></a>contact</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

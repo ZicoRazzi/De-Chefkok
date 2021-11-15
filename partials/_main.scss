@@ -1,0 +1,125 @@
+$font-fam: 'Lobster', cursive;
+$font-12: 1.2rem;
+$font-16: 1.6rem;
+$font-20: 2rem;
+$font-26: 2.6rem;
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  min-height: 800px;
+  font-size: $font-12;
+  font-family: $font-fam;
+}
+a {
+  text-decoration: none;
+  color: $hdr-txt-color;
+  font-size: 20px;
+}
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 40px;
+}
+.main {
+  min-height: 130px;
+  position: relative;
+  .bg_video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  &_content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: 200px;
+    right: 100px;
+  }
+  &_title {
+    color: $hdr-txt-color;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    font-size: 40px;
+  }
+  &_span {
+    font-size: $font-20;
+    letter-spacing: 1.2px;
+    color: $hdr-txt-color;
+  }
+  .main_buttons {
+    margin-top: 20px;
+    .main_button {
+      width: 100px;
+      height: 40px;
+      background-color: transparent;
+      border-radius: 2px;
+      color: $hdr-txt-color;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .main_button-buy {
+      border: 1px solid rgb(97, 135, 216);
+    }
+    .main_button-show {
+      border: 1px solid rgb(128, 179, 128);
+    }
+    .main_button-show:hover {
+      background-color: rgb(97, 135, 216);
+      border-color: $hdr-txt-color;
+    }
+    .main_button-buy:hover {
+      background-color: rgb(128, 179, 128);
+      border-color: $hdr-txt-color;
+    }
+  }
+}
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  li {
+    margin-left: 10px;
+    margin-top: 17px;
+  }
+  .main {
+    &_content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      top: 300px;
+    }
+    &_title {
+      font-size: 30px;
+    }
+    &_span {
+      font-size: $font-12;
+    }
+  }
+}
